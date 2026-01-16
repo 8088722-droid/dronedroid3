@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Games Hub - DroneDroid</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Games Hub</h1>
+      <p class="tagline">Play, discover, and share web games</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <input id="search" type="search" placeholder="Search games by title or tag..." />
+      <select id="filter">
+        <option value="all">All</option>
+        <option value="arcade">Arcade</option>
+        <option value="puzzle">Puzzle</option>
+        <option value="strategy">Strategy</option>
+      </select>
+    </section>
+
+    <section id="games" class="grid">
+      <article class="card" data-title="Space Dodger" data-tags="arcade space">
+        <img src="https://via.placeholder.com/320x180?text=Space+Dodger" alt="Space Dodger">
+        <h3>Space Dodger</h3>
+        <p class="desc">Dodge meteors and collect power-ups to survive as long as possible.</p>
+        <div class="card-actions">
+          <a class="play" href="games/space-dodger/index.html" target="_blank" rel="noopener">Play</a>
+          <button class="details">Details</button>
+        </div>
+      </article>
+
+      <article class="card" data-title="Brain Blocks" data-tags="puzzle brain">
+        <img src="https://via.placeholder.com/320x180?text=Brain+Blocks" alt="Brain Blocks">
+        <h3>Brain Blocks</h3>
+        <p class="desc">Arrange blocks to clear levels — a relaxing puzzle game.</p>
+        <div class="card-actions">
+          <a class="play" href="games/brain-blocks/index.html" target="_blank" rel="noopener">Play</a>
+          <button class="details">Details</button>
+        </div>
+      </article>
+
+      <article class="card" data-title="Tower Tactician" data-tags="strategy tower">
+        <img src="https://via.placeholder.com/320x180?text=Tower+Tactician" alt="Tower Tactician">
+        <h3>Tower Tactician</h3>
+        <p class="desc">Build towers and defend your base from waves of enemies.</p>
+        <div class="card-actions">
+          <a class="play" href="games/tower-tactician/index.html" target="_blank" rel="noopener">Play</a>
+          <button class="details">Details</button>
+        </div>
+      </article>
+    </section>
+
+    <section class="add-info">
+      <h2>Add your game</h2>
+      <p>To add a game, create a folder under <code>games/</code> with an <code>index.html</code> entry point and add a card here in <code>index.html</code>.</p>
+    </section>
+  </main>
+
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button id="closeModal" class="close">✕</button>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDesc"></p>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

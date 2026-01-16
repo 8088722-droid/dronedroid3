@@ -1,0 +1,30 @@
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --accent:#3ddc84;
+  --muted:#94a3b8;
+  --glass: rgba(255,255,255,0.03);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial;color:#e6eef8;background:linear-gradient(180deg,var(--bg) 0%, #071026 100%);}
+.container{max-width:1100px;margin:0 auto;padding:24px}
+.site-header{padding:32px 0;text-align:center}
+.site-header h1{margin:0;font-size:2rem}
+.tagline{color:var(--muted);margin-top:6px}
+.controls{display:flex;gap:12px;align-items:center;margin-bottom:18px}
+.controls input[type=search]{flex:1;padding:10px 12px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:var(--glass);color:#fff}
+.controls select{padding:10px;border-radius:8px;background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.06)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);display:flex;flex-direction:column}
+.card img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+.card h3{margin:12px 0 6px 0}
+.desc{color:var(--muted);font-size:0.95rem;margin:0 0 12px 0}
+.card-actions{margin-top:auto;display:flex;gap:8px}
+.card-actions a.play{padding:8px 12px;background:var(--accent);color:#062018;border-radius:8px;text-decoration:none;font-weight:600}
+.card-actions button.details{padding:8px 12px;background:transparent;border:1px solid rgba(255,255,255,0.06);color:#fff;border-radius:8px;cursor:pointer}
+.add-info{margin-top:28px;padding:16px;border-radius:10px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03)}
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(2,6,23,0.6);opacity:0;pointer-events:none;transition:opacity .15s}
+.modal[aria-hidden="false"]{opacity:1;pointer-events:auto}
+.modal-content{background:#071428;padding:20px;border-radius:10px;max-width:540px;width:92%;color:#fff;position:relative}
+.close{position:absolute;top:8px;right:8px;background:transparent;border:0;color:#9fb3c8;font-size:18px;cursor:pointer}
+@media (max-width:520px){.controls{flex-direction:column;align-items:stretch}.card img{height:120px}}
